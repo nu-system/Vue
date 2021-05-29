@@ -7,9 +7,12 @@
     "serve": "vite preview"
   },
   "dependencies": {
+    "package": "^1.0.1",
+    "sacss": "^1.0.4",
     "vue": "^3.0.5"
   },
   "devDependencies": {
+    "@_nu/css-button": "^0.0.15",
     "@vitejs/plugin-vue": "^1.2.2",
     "@vue/compiler-sfc": "^3.0.5",
     "vite": "^2.3.4"

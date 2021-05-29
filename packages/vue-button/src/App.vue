@@ -1,22 +1,47 @@
 <template>
-  <img alt="Vue logo" src="assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + Vite" />
+  <h1>{{ msg }}</h1>
+  <div>
+    count is: {{ state.count }}
+  </div>
+  <p>
+    <Button class="_fill _primary" @click="state.count++">Hello World</Button>
+    <Button class="_fill _secondary" @click="state.count++">Hello World</Button>
+    <Button class="_fill _warning" @click="state.count++">Hello World</Button>
+    <Button class="_fill _success" @click="state.count++">Hello World</Button>
+    <Button class="_fill _danger" @click="state.count++">Hello World</Button>
+  </p>
+  <p>
+    <Button class="_ghost _primary" @click="state.count++">Hello World</Button>
+    <Button class="_ghost _secondary" @click="state.count++">Hello World</Button>
+    <Button class="_ghost _warning" @click="state.count++">Hello World</Button>
+    <Button class="_ghost _success" @click="state.count++">Hello World</Button>
+    <Button class="_ghost _danger" @click="state.count++">Hello World</Button>
+  </p>
+  <p>
+    <Button class="_link _primary" @click="state.count++">Hello World</Button>
+    <Button class="_link _secondary" @click="state.count++">Hello World</Button>
+    <Button class="_link _warning" @click="state.count++">Hello World</Button>
+    <Button class="_link _success" @click="state.count++">Hello World</Button>
+    <Button class="_link _danger" @click="state.count++">Hello World</Button>
+  </p>
+  <p>
+    <Button class="_fill _primary _large" @click="state.count++">Hello World</Button>
+    <Button class="_fill _primary" @click="state.count++">Hello World</Button>
+    <Button class="_fill _primary _small" @click="state.count++">Hello World</Button>
+  </p>
 </template>
 
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+import Button from './components/Button.vue';
+import { defineProps, reactive } from 'vue';
 
-// This starter template is using Vue 3 experimental <script setup> SFCs
-// Check out https://github.com/vuejs/rfcs/blob/script-setup-2/active-rfcs/0000-script-setup.md
+defineProps({
+  msg: String,
+});
+
+const state = reactive({ count: 0 });
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+@import "sacss";
 </style>
