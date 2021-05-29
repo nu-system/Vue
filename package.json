@@ -1,0 +1,22 @@
+{
+  "name": "@_nu/vue",
+  "version": "1.0.0",
+  "private": true,
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "dev:button": "yarn workspace @_nu/vue-button yarn dev",
+    "build:button": "yarn workspace @_nu/vue-button yarn build",
+    "build": "npm-run-all build:*"
+  },
+  "repository": "git@github.com:nu-system/Vue.git",
+  "author": "ziven27",
+  "license": "MIT",
+  "devDependencies": {
+    "lerna": "^4.0.0"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
+}
